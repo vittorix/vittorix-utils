@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Bunch of JS utilities from vittorix",
   "main": "vittorix-utils.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,5 @@
   "bugs": {
     "url": "https://github.com/vittorix/vittorix-utils/issues"
   },
-  "homepage": "https://github.com/vittorix/vittorix-utils#readme",
-  "type": "module"
+  "homepage": "https://github.com/vittorix/vittorix-utils#readme"
 }
