@@ -23,6 +23,10 @@ const parse = function (str) {
   return JSON.parse(str);
 };
 
+const randomBoolean = () => {
+  return Math.random() < 0.5;
+};
+
 const stringy = function (obj) {
   return JSON.stringify(obj);
 };
@@ -31,4 +35,4 @@ function throwErr(err) {
   throw err;
 }
 
-export { isEmpty, isNotEmpty, isString, p, parse, stringy };
+export { isEmpty, isNotEmpty, isString, p, parse, randomBoolean, stringy };
