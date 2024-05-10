@@ -19,8 +19,16 @@ const p = function (string) {
   console.log(string);
 };
 
+const parse = function (str) {
+  return JSON.parse(str);
+};
+
+const stringy = function (obj) {
+  return JSON.stringify(obj);
+};
+
 function throwErr(err) {
   throw err;
 }
 
-export { isEmpty, isNotEmpty, isString, p };
+export { isEmpty, isNotEmpty, isString, p, parse, stringy };
