@@ -1,9 +1,3 @@
-//prettier-ignore
-const assertErr = (condition, errorMessage) => {
-    if (condition)
-      throwErr("Test was supposed to an error. " + errorMessage + " condition: <" + condition + ">: ")
-};
-
 const checkString = function (str) {
   return isString(str) || throwErr("ERROR. Not a string: " + str);
 };
@@ -41,8 +35,24 @@ function throwErr(err) {
   throw err;
 }
 
-const test =  (condition, errorMessage) => {
+const test = (condition, errorMessage) => {
   return condition || throwErr("ERROR. " + errorMessage);
 };
 
-export { assertErr, isEmpty, isNotEmpty, isString, p, parse, randomBoolean, stringy, test };
+//prettier-ignore
+const testNot = (boolCondition, errorMessage) => {
+    if (boolCondition)
+      throwErr("Condition should be false. " + errorMessage + " condition: <" + boolCondition + ">: ")
+}
+
+export {
+  isEmpty,
+  isNotEmpty,
+  isString,
+  p,
+  parse,
+  randomBoolean,
+  stringy,
+  test,
+  testNot
+};
