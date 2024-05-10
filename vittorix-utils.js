@@ -1,3 +1,9 @@
+//prettier-ignore
+const assertErr = (condition, errorMessage) => {
+    if (condition)
+      throwErr("Test was supposed to an error. " + errorMessage + " condition: <" + condition + ">: ")
+};
+
 const checkString = function (str) {
   return isString(str) || throwErr("ERROR. Not a string: " + str);
 };
@@ -35,4 +41,8 @@ function throwErr(err) {
   throw err;
 }
 
-export { isEmpty, isNotEmpty, isString, p, parse, randomBoolean, stringy };
+const test =  (condition, errorMessage) => {
+  return condition || throwErr("ERROR. " + errorMessage);
+};
+
+export { assertErr, isEmpty, isNotEmpty, isString, p, parse, randomBoolean, stringy, test };
