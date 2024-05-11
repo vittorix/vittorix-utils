@@ -19,6 +19,12 @@ const p = function (string) {
   console.log(string);
 };
 
+const pa = (array) => {
+  array.forEach((element) => {
+    p(element);
+  });
+};
+
 const parse = function (str) {
   return JSON.parse(str);
 };
@@ -50,6 +56,7 @@ export {
   isNotEmpty,
   isString,
   p,
+  pa,
   parse,
   randomBoolean,
   stringy,
