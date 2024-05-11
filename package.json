@@ -1,6 +1,6 @@
 {
   "name": "vittorix-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Bunch of JS utilities from vittorix",
   "main": "vittorix-utils.js",
   "type": "module",
