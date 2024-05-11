@@ -3,8 +3,10 @@ const checkString = function (str) {
 };
 
 const isEmpty = function (str) {
-  checkString(str);
-  return !str || /^\s*$/.test(str);
+  // const s = str ? true : false
+  // p('string in isEmpty: <'+ str + '> + s: ' + s)
+  // checkString(str)
+  return !str || !isString(str) || /^\s*$/.test(str);
 };
 
 const isNotEmpty = function (string) {
@@ -19,7 +21,10 @@ const p = function (string) {
   console.log(string);
 };
 
-const pa = (array) => {
+const pa = (array, arrayName) => {
+  if (isNotEmpty(arrayName)) {
+    p(arrayName + ": ");
+  }
   array.forEach((element) => {
     p(element);
   });
