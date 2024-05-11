@@ -17,6 +17,12 @@ const isString = function (str) {
   return typeof str === "string" || str instanceof String;
 };
 
+// array can be a string or an array
+const makeArr = (array) => {
+  if (isNotEmpty(array)) return parse(array);
+  return parse(stringy(array));
+};
+
 const p = function (string) {
   console.log(string);
 };
@@ -47,7 +53,7 @@ function throwErr(err) {
 }
 
 const test = (condition, errorMessage) => {
-  return condition || throwErr("ERROR. " + errorMessage);
+  return condition || throwErr("ERROR: " + errorMessage);
 };
 
 //prettier-ignore
@@ -60,6 +66,7 @@ export {
   isEmpty,
   isNotEmpty,
   isString,
+  makeArr,
   p,
   pa,
   parse,
